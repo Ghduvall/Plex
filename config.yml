@@ -1,0 +1,37 @@
+# This is the conifg.yml where most variables are set for the up_script program
+# You can change that paths to fit what you need and other variables as well
+#
+#
+
+paths:
+  exitcode: z
+  ipaddress: 192.168.1.192
+  logpath: /Volumes/MacPlexExternal1/PlexMedia/logs
+  # This grep is used for displaying df -lh of all volumes
+  grepsearchpattern: MacPlex
+  uploaduser: grantduvall
+  cpath: /Users/$USER/Movies/Plex/
+  # Change disk paths to where your Volumes are located
+  disk1: /Volumes/MacPlexExternal1/PlexMedia
+  disk2: /Volumes/MacPlexExternal2/PlexMedia
+  disk3: /Volumes/MacPlexExternal3/PlexMedia
+  # Additional disks can be added 
+  disk4: /Volumes/MacPlexExternal4/PlexMedia
+  disk5: /Volumes/MacPlexExternal5/PlexMedia
+  movielistpath: /Users/$USER/Movies/Plex/Lists/movies.txt
+  uppath: /Users/$USER/Movies/Plex/Uploaded
+  logfile: /Users/$USER/Movies/Plex/Lists/upload
+
+# Replace plexrootscipts to where you placed your bash scripts folder
+bashfiles:
+  plexrootscripts: /Users/$USER/Documents/GitHub/Coding/bash/plex/
+  upscriptpath: up_script.sh
+  randmovie: random_movie.sh
+  mvfile: mv_file.sh
+  serverstatus: check_server_status.sh
+  diskspace: check_disk_space.sh
+  createlog: create_log_file.sh
+  confirmupload: confirm_and_upload.sh
+  movieuploader: movie_uploader.sh
+  pickdisk: pick_disk.sh
+  findcurrenttvshows: find_current_tvshows.sh
