@@ -1,13 +1,16 @@
 #!/bin/bash
-path="/Volumes/MacPlexExternal3/PlexMedia/Season 3/"
+path="/Users/grantduvall/Workspace/Plex/test/"
 cd "$path"
-
 echo $path
-remove="[720p] [Dual-]"
 
-for filename in *.kv; do 
+for x in *.txt; do mv -- "$x" "${x//[][]}"; done
+
+
+remove="hitest hello"
+for filename in *.txt; do 
     [ -f "$filename" ] || continue
     mv "$filename" "${filename//$remove/}"
     echo $filename
 
 done
+
