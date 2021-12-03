@@ -1,16 +1,24 @@
 #!/bin/bash
-path="/Users/grantduvall/Workspace/Plex/test/"
+path=/Volumes/MacPlexExternal3/PlexMedia/Season\ 19/
 cd "$path"
 echo $path
 
-for x in *.txt; do mv -- "$x" "${x//[][]}"; done
+for x in *.mkv; do mv -- "$x" "${x//[][]}"; done
 
-
-remove="hitest hello"
-for filename in *.txt; do 
+# " 720p Dual-Audio Multi-Sub x265 pseudo"
+# "Anime RG " 
+remove="AnimeRG "
+for filename in *.mkv; do 
     [ -f "$filename" ] || continue
     mv "$filename" "${filename//$remove/}"
     echo $filename
 
 done
 
+remove1=" 720p Dual-Audio Multi-Sub x265 pseudo"
+for filename in *.mkv; do 
+    [ -f "$filename" ] || continue
+    mv "$filename" "${filename//$remove1/}"
+    echo $filename
+
+done
