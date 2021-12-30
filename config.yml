@@ -24,7 +24,7 @@ paths:
 
 # Replace plexrootscipts to where you placed your bash scripts folder
 bashfiles:
-  plexrootscripts: /Users/$USER/Documents/GitHub/Coding/bash/plex/
+  plexrootscripts: /Users/$USER/Workspace/Plex/
   upscriptpath: up_script.sh
   randmovie: random_movie.sh
   mvfile: mv_file.sh
@@ -33,5 +33,5 @@ bashfiles:
   createlog: create_log_file.sh
   confirmupload: confirm_and_upload.sh
   movieuploader: movie_uploader.sh
-  pickdisk: pick_disk.sh
+  #pickdisk: pick_disk.sh
   findcurrenttvshows: find_current_tvshows.sh
