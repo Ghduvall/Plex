@@ -33,5 +33,5 @@ bashfiles:
   createlog: create_log_file.sh
   confirmupload: confirm_and_upload.sh
   movieuploader: movie_uploader.sh
-  #pickdisk: pick_disk.sh
+  pickdisk: pick_disk.sh
   findcurrenttvshows: find_current_tvshows.sh

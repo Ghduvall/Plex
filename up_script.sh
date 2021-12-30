@@ -65,8 +65,8 @@ pickdisk="${plexrootscripts}${config_bashfiles_pickdisk}"
 findcurrenttvshows="${plexrootscripts}${config_bashfiles_findcurrenttvshows}"
 #########################################################################################
 
-list=$(ssh "$uploaduser"@"$ipaddress" "df -lh | tail -8 | awk '{print $4 " " $9}' | grep "$grepsearchpattern"")
-set -- $list
+#list=$(ssh "$uploaduser"@"$ipaddress" "df -lh | tail -8 | awk '{print $4 " " $9}' | grep "$grepsearchpattern"")
+#set -- $list
 
 while [ "$exitcode" != "q" ]
 	do
