@@ -152,7 +152,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "iTerm"	open "/Users/grantduvall/Documents/GitHub/Plex/up_script.sh"end tell</string>
+					<string>tell application "iTerm"	open "/Users/grantduvall/Workspace/Plex/up_script.sh"end tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -216,7 +216,7 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>9E795790-D071-4EDF-93DA-824B317C237D</key>
+		<key>DBC76B6D-F239-4250-BE2D-46F8D7206BA9</key>
 		<dict>
 			<key>from</key>
 			<string>C98E51C4-BC22-49FB-A604-3E0BE8E73530 - C98E51C4-BC22-49FB-A604-3E0BE8E73530</string>
