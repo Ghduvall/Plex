@@ -31,7 +31,7 @@
 . parse_yaml.sh
 
 # read yaml file / point parse_yaml at config.yml file and you are good go
-eval $(parse_yaml /Users/$USER/Documents/GitHub/Plex/config.yml "config_")
+eval $(parse_yaml /Users/$USER/Workspace/Plex/config.yml "config_")
 
 # access yaml content
 # path variables from config.yml
