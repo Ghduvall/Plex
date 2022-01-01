@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Things to add to the script #Personal Use
-# Add a function that auto picks which disk to use based on disk that has the most free space
-# Add a function that searches when uploading tv shows to find current tv_show folder
+# Things to add to the script # Personal Use
+# 	Add a function that searches when uploading tv shows to find current tv_show folder
 #
 #
 # This script is for uploading files to a Plex Media Server | Also includes a Disk Space Checker and Random Movie Picker for Movies uploaded
@@ -15,10 +14,10 @@
 # to use this script you have to have these dirs in your current users path - Unix / Linux ONLY
 # 
 # 		You can create these dirs by running the plex_up_script_setup.sh script
-# /Users/$USER/Movies/Plex/Movies
-# /Users/$USER/Movies/Plex/Tv_Shows
-# /Users/$USER/Movies/Plex/Music
-# /Users/$USER/Movies/Plex/Workout
+# 	/Users/$USER/Movies/Plex/Movies
+# 	/Users/$USER/Movies/Plex/Tv_Shows
+# 	/Users/$USER/Movies/Plex/Music
+# 	/Users/$USER/Movies/Plex/Workout
 #
 
 
@@ -26,6 +25,7 @@
 
 #########################################################################################
 ########	        config.yml file to make customizing variables easier		#########
+#########################################################################################
 
 # include parse_yaml function
 . parse_yaml.sh
@@ -65,8 +65,6 @@ pickdisk="${plexrootscripts}${config_bashfiles_pickdisk}"
 findcurrenttvshows="${plexrootscripts}${config_bashfiles_findcurrenttvshows}"
 #########################################################################################
 
-#list=$(ssh "$uploaduser"@"$ipaddress" "df -lh | tail -8 | awk '{print $4 " " $9}' | grep "$grepsearchpattern"")
-#set -- $list
 
 while [ "$exitcode" != "q" ]
 	do

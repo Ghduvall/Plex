@@ -24,7 +24,6 @@ if test "$serverResponse" == "1"; then
 
 
         if test "$uptype" == 1; then
-
             ppath=$ppath"/movies"
             cpath=$cpath"Movies"
             export cpath
@@ -33,10 +32,7 @@ if test "$serverResponse" == "1"; then
             current_paths
 
             read -p "Are you sure you want to upload Movies: " confirm
-            
-            
             source $confirmupload
-
 
             #echos current files being uploaded into movies.txt for random movie picker
             if test "$confirm" == "y"; then
@@ -44,7 +40,6 @@ if test "$serverResponse" == "1"; then
             fi
 
         elif test "$uptype" == 2; then
-
             ppath=$ppath"/tv_shows"
             cpath=$cpath"Tv_Shows"
             export cpath
@@ -53,12 +48,10 @@ if test "$serverResponse" == "1"; then
             current_paths
 
             read -p "Are you sure you want to upload Tv Shows?: " confirm
-
             source $findcurrenttvshows
             source $confirmupload
 
         elif test "$uptype" == 3; then
-
             ppath=$ppath"/music"
             cpath=$cpath"Music"
             export cpath
@@ -67,11 +60,9 @@ if test "$serverResponse" == "1"; then
             current_paths
 
             read -p "Are you sure you want to upload Music?: " confirm
-
             source $confirmupload
 
         elif test "$uptype" == 4; then
-
             ppath=$ppath"/other_videos/workout"
             cpath=$cpath"Workout"
             export cpath
@@ -80,7 +71,6 @@ if test "$serverResponse" == "1"; then
             current_paths
 
             read -p "Are you sure you want to upload Workouts?: " confirm
-
             source $confirmupload
 
         else test;
