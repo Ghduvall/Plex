@@ -34,10 +34,7 @@ if test "$serverResponse" == "1"; then
             read -p "Are you sure you want to upload Movies: " confirm
             source $confirmupload
 
-            #echos current files being uploaded into movies.txt for random movie picker
-            if test "$confirm" == "y"; then
-                echo "$(ls)"  >> $movielistpath
-            fi
+            
 
         elif test "$uptype" == 2; then
             ppath=$ppath"/tv_shows"
