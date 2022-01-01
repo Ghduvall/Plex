@@ -4,6 +4,8 @@
  Things to change for program to work.
 
  Config.yml
-    * plexrootscripts var that is under bashfiles:
+ 
+    plexrootscripts var that is under bashfiles
  up_script.sh
-    * eval $(parse_yaml YOURPATHTOCONFIG "config_")
+
+    eval $(parse_yaml YOURPATHTOCONFIG "config_")
