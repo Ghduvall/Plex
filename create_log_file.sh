@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-logfile=$logfile"$(hostname)".txt
+logfile=$logfile
 
 echo -e "\n_________________________________________________________________________________________" >> $logfile
 echo -e "Computer Name: " "$(hostname)" "(" "$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')" ")">> $logfile
