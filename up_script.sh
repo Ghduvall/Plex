@@ -71,7 +71,7 @@ while [ "$exitcode" != "q" ]
 		echo -e "Running: "$upscriptpath"\n\n"
 		cpath=$config_paths_cpath
 
-		echo -e "\n 	################################################################\n 	1(Movie Uploader) , 2(Random Movie Picker) , 3(Check Disk Space)\n	################################################################\n"
+		echo -e "\n 	----------------------------------------------------------------\n 	1(Movie Uploader) , 2(Random Movie Picker) , 3(Check Disk Space)\n	----------------------------------------------------------------\n"
 
 		echo -e "Enter 'q' to quit"
 		read -p "What program do you want to use? " programType
@@ -102,9 +102,9 @@ while [ "$exitcode" != "q" ]
 		#Function that sets and prints current paths for option selected
 		current_paths () {
 			cd $cpath
-			echo -e "\n############################################################\nCurrent Path: " $PWD 
+			echo -e "\n_____________________________________________________________\nCurrent Path: " $PWD 
 			echo -e "Upload Path: " $ppath
-			echo -e "\n\nCurrent Files:\n\n" "$(ls *) \n############################################################\n"
+			echo -e "\n\nCurrent Files:\n\n" "$(ls *) \n_____________________________________________________________\n"
 		}
 
 		

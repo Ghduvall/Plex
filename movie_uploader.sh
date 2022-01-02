@@ -3,7 +3,7 @@
 # This is the main option one program that uploads files
 
 
-echo -e "\n 	##########################################\n 	You chose, To use the Movie Uploader.\n 	##########################################\n"
+echo -e "\n 	--------------------------------------\n 	You chose, To use the Movie Uploader.\n 	--------------------------------------\n"
 
 #echo "Current Path: " $PWD
 
@@ -14,7 +14,7 @@ if test "$serverResponse" == "1"; then
     echo -e "Continuing with the script.\n"
 
         cd $cpath"Downloaded"
-        echo -e "############################################################\nCurrent Files in $(PWD):\n\n" "$(ls *) \n############################################################\n"
+        echo -e "________________________________________________________________________\nCurrent Files in $(PWD):\n\n" "$(ls *) \n________________________________________________________________________\n"
         read -p "Choose upload type - 1(Movies) 2(Tv Shows) 3(Music) 4(Workout): " uptype
         
         # Choosing disk that has the most free space and uploading to it

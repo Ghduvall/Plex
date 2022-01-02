@@ -6,7 +6,7 @@ uppath=$uppath
 
 move_file (){
     echo -e "\n"
-    echo -e "==============\n $(ls *) \n has been moved to $uppath \n==============\n"
+    echo -e "==========================================================\n $(ls *) \n\n-Files moved to $uppath \n==========================================================\n"
     mv * $uppath
 }
 

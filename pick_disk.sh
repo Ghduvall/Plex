@@ -27,30 +27,30 @@ if (($mp1free >= $mp2free)) && (($mp1free >= $mp3free)) && (($mp1free >= $mp4fre
     #echo -e "\n"$mp1free
     #echo -e "\nI choose "$mp1name
     ppath="${disk1}"
-    echo "I choose ${mp1name}"
+    #echo "I choose ${mp1name}"
 elif (($mp2free >= $mp1free)) && (($mp2free >= $mp3free)) && (($mp2free >= $mp4free)) && (($mp2free >= $mp5free)) ; then
     #echo -e "\n"$mp2free
     #echo -e "\nI choose "$mp2name
     ppath="${disk2}"
-    echo "I choose ${mp2fname}"
+    #echo "I choose ${mp2fname}"
 elif (($mp3free >= $mp1free)) && (($mp3free >= $mp2free)) && (($mp3free >= $mp4free)) && (($mp3free >= $mp5free)) ; then
     #echo -e "\n"$mp3free
     #echo -e "\nI choose "$mp3name
     ppath="${disk3}"
-    echo "I choose ${mp3name}"
+    #echo "I choose ${mp3name}"
 elif (($mp4free >= $mp1free)) && (($mp4free >= $mp2free)) && (($mp4free >= $mp3free)) && (($mp4free >= $mp5free)) ; then
     #echo -e "\n"$mp3free
     #echo -e "\nI choose "$mp4name
     ppath="${disk4}"
     #echo "${ppath} Is this"
     #echo "${disk4} is disk4"
-    echo "I choose ${mp4name}"
+    #echo "I choose ${mp4name}"
 elif (($mp5free >= $mp1free)) && (($mp5free >= $mp2free)) && (($mp5free >= $mp3free)) && (($mp5free >= $mp4free)) ; then
     #echo -e "\n"$mp3free
     # echo -e "\nI choose "$mp5name
     ppath="${disk5}"
     # echo "${ppath} Is this"
     # echo "${disk5} is disk5"
-    echo "I choose ${mp5name}"
+    #echo "I choose ${mp5name}"
 fi
 
