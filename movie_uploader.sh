@@ -30,6 +30,7 @@ if test "$serverResponse" == "1"; then
 
             mv_download_files
             current_paths
+            clear
 
             read -p "Are you sure you want to upload Movies: " confirm
             source $confirmupload
@@ -62,7 +63,8 @@ if test "$serverResponse" == "1"; then
 
             mv_download_files
             current_paths
-
+            clear
+            
             read -p "Are you sure you want to upload Music?: " confirm
             source $confirmupload
 
@@ -73,6 +75,7 @@ if test "$serverResponse" == "1"; then
 
             mv_download_files
             current_paths
+            clear
 
             read -p "Are you sure you want to upload Workouts?: " confirm
             source $confirmupload
