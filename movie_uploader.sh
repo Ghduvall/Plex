@@ -28,9 +28,10 @@ if test "$serverResponse" == "1"; then
             cpath=$cpath"Movies"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-            clear
+            
 
             read -p "Are you sure you want to upload Movies: " confirm
             source $confirmupload
@@ -42,9 +43,10 @@ if test "$serverResponse" == "1"; then
             cpath=$cpath"Tv_Shows"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-            clear
+            
             echo $'\e[1;33m'_____________________________________________________________________________________________________$'\e[0m'
             echo -e "When Uploading Tv Shows please create a parent folder with the shows name in this format"
             echo -e "Game of Thrones --> Game.Of.Thrones"
@@ -61,9 +63,9 @@ if test "$serverResponse" == "1"; then
             cpath=$cpath"Music"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-            clear
             
             read -p "Are you sure you want to upload Music?: " confirm
             source $confirmupload
@@ -73,10 +75,10 @@ if test "$serverResponse" == "1"; then
             cpath=$cpath"Workout"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-            clear
-
+        
             read -p "Are you sure you want to upload Workouts?: " confirm
             source $confirmupload
 
