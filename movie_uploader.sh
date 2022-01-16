@@ -43,7 +43,14 @@ if test "$serverResponse" == "1"; then
 
             mv_download_files
             current_paths
-
+            clear
+            echo $'\e[1;33m'_____________________________________________________________________________________________________$'\e[0m'
+            echo -e "When Uploading Tv Shows please create a parent folder with the shows name in this format"
+            echo -e "Game of Thrones --> Game.Of.Thrones"
+            echo -e "Once that folder is created put that folder in Plex/Downloaded/ directory"
+            echo -e "Then put all tv shows files for that show in the new folder"
+            echo $'\e[1;33m'_____________________________________________________________________________________________________$'\e[0m'
+            echo -e "\n"
             read -p "Are you sure you want to upload Tv Shows?: " confirm
             source $findcurrenttvshows
             source $confirmupload
