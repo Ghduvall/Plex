@@ -47,7 +47,8 @@ if test "$serverResponse" == "1"; then
             mv_download_files
             current_paths
             
-            echo $'\e[1;33m'_____________________________________________________________________________________________________$'\e[0m'
+            Yellow=$'\e[1;33m'
+            echo $Yellow"_____________________________________________________________________________________________________"
             echo -e "When Uploading Tv Shows please create a parent folder with the shows name in this format"
             echo -e "Game of Thrones --> Game.Of.Thrones"
             echo -e "Once that folder is created put that folder in Plex/Downloaded/ directory"
