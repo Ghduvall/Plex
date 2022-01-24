@@ -3,6 +3,7 @@ path=/Volumes/MacPlexExternal5/PlexMedia/Death\ Note/
 cd "$path"
 echo $path
 
+
 for x in *.mkv; do mv -- "$x" "${x//[][]}"; done
 
 # " 720p Dual-Audio Multi-Sub x265 pseudo"
