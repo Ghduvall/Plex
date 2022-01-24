@@ -20,11 +20,11 @@ paths:
   disk5: /Volumes/MacPlexExternal5/PlexMedia
   movielistpath: /Users/$USER/Movies/Plex/Lists/movies.txt
   uppath: /Users/$USER/Movies/Plex/Uploaded
-  logfile: /Users/$USER/Movies/Plex/Lists/upload
+  logfile: /Users/$USER/Movies/Plex/Lists/upload"$(hostname)".txt
 
 # Replace plexrootscipts to where you placed your bash scripts folder
 bashfiles:
-  plexrootscripts: /Users/$USER/Documents/GitHub/Coding/bash/plex/
+  plexrootscripts: /Users/$USER/Workspace/Plex/
   upscriptpath: up_script.sh
   randmovie: random_movie.sh
   mvfile: mv_file.sh

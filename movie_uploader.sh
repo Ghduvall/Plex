@@ -3,7 +3,7 @@
 # This is the main option one program that uploads files
 
 
-echo -e "\n 	##########################################\n 	You chose, To use the Movie Uploader.\n 	##########################################\n"
+echo -e "\n 	--------------------------------------\n 	You chose, To use the Movie Uploader.\n 	--------------------------------------\n"
 
 #echo "Current Path: " $PWD
 
@@ -14,7 +14,7 @@ if test "$serverResponse" == "1"; then
     echo -e "Continuing with the script.\n"
 
         cd $cpath"Downloaded"
-        echo -e "############################################################\nCurrent Files in $(PWD):\n\n" "$(ls *) \n############################################################\n"
+        echo -e "________________________________________________________________________\nCurrent Files in $(PWD):\n\n" "$(ls *) \n________________________________________________________________________\n"
         read -p "Choose upload type - 1(Movies) 2(Tv Shows) 3(Music) 4(Workout): " uptype
         
         # Choosing disk that has the most free space and uploading to it
@@ -24,63 +24,63 @@ if test "$serverResponse" == "1"; then
 
 
         if test "$uptype" == 1; then
-
             ppath=$ppath"/movies"
             cpath=$cpath"Movies"
             export cpath
 
+            clear
             mv_download_files
             current_paths
+            
 
             read -p "Are you sure you want to upload Movies: " confirm
-            
-            
             source $confirmupload
 
-
-            #echos current files being uploaded into movies.txt for random movie picker
-            if test "$confirm" == "y"; then
-                echo "$(ls)"  >> $movielistpath
-            fi
+            
 
         elif test "$uptype" == 2; then
-
             ppath=$ppath"/tv_shows"
             cpath=$cpath"Tv_Shows"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-
+            
+            Yellow=$'\e[1;33m'
+            echo $Yellow"_____________________________________________________________________________________________________"
+            echo -e "When Uploading Tv Shows please create a parent folder with the shows name in this format"
+            echo -e "Game of Thrones --> Game.Of.Thrones"
+            echo -e "Once that folder is created put that folder in Plex/Downloaded/ directory"
+            echo -e "Then put all tv shows files for that show in the new folder"
+            echo $'\e[1;33m'_____________________________________________________________________________________________________$'\e[0m'
+            echo -e "\n"
             read -p "Are you sure you want to upload Tv Shows?: " confirm
-
             source $findcurrenttvshows
             source $confirmupload
 
         elif test "$uptype" == 3; then
-
             ppath=$ppath"/music"
             cpath=$cpath"Music"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-
+            
             read -p "Are you sure you want to upload Music?: " confirm
-
             source $confirmupload
 
         elif test "$uptype" == 4; then
-
             ppath=$ppath"/other_videos/workout"
             cpath=$cpath"Workout"
             export cpath
 
+            clear
             mv_download_files
             current_paths
-
+        
             read -p "Are you sure you want to upload Workouts?: " confirm
-
             source $confirmupload
 
         else test;

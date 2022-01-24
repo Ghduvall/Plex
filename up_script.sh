@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Things to add to the script #Personal Use
-# Add a function that auto picks which disk to use based on disk that has the most free space
-# Add a function that searches when uploading tv shows to find current tv_show folder
+# Things to add to the script # Personal Use
+# 	Add a function that searches when uploading tv shows to find current tv_show folder
 #
 #
 # This script is for uploading files to a Plex Media Server | Also includes a Disk Space Checker and Random Movie Picker for Movies uploaded
@@ -15,10 +14,10 @@
 # to use this script you have to have these dirs in your current users path - Unix / Linux ONLY
 # 
 # 		You can create these dirs by running the plex_up_script_setup.sh script
-# /Users/$USER/Movies/Plex/Movies
-# /Users/$USER/Movies/Plex/Tv_Shows
-# /Users/$USER/Movies/Plex/Music
-# /Users/$USER/Movies/Plex/Workout
+# 	/Users/$USER/Movies/Plex/Movies
+# 	/Users/$USER/Movies/Plex/Tv_Shows
+# 	/Users/$USER/Movies/Plex/Music
+# 	/Users/$USER/Movies/Plex/Workout
 #
 
 
@@ -26,12 +25,12 @@
 
 #########################################################################################
 ########	        config.yml file to make customizing variables easier		#########
+#########################################################################################
 
 # include parse_yaml function
 . parse_yaml.sh
-
 # read yaml file / point parse_yaml at config.yml file and you are good go
-eval $(parse_yaml /Users/$USER/Documents/GitHub/Coding/bash/plex/config.yml "config_")
+eval $(parse_yaml /Users/$USER/Workspace/Plex/config.yml "config_")
 
 # access yaml content
 # path variables from config.yml
@@ -65,8 +64,6 @@ pickdisk="${plexrootscripts}${config_bashfiles_pickdisk}"
 findcurrenttvshows="${plexrootscripts}${config_bashfiles_findcurrenttvshows}"
 #########################################################################################
 
-list=$(ssh "$uploaduser"@"$ipaddress" "df -lh | tail -8 | awk '{print $4 " " $9}' | grep "$grepsearchpattern"")
-set -- $list
 
 while [ "$exitcode" != "q" ]
 	do
@@ -74,7 +71,7 @@ while [ "$exitcode" != "q" ]
 		echo -e "Running: "$upscriptpath"\n\n"
 		cpath=$config_paths_cpath
 
-		echo -e "\n 	################################################################\n 	1(Movie Uploader) , 2(Random Movie Picker) , 3(Check Disk Space)\n	################################################################\n"
+		echo -e "\n 	----------------------------------------------------------------\n 	1(Movie Uploader) , 2(Random Movie Picker) , 3(Check Disk Space)\n	----------------------------------------------------------------\n"
 
 		echo -e "Enter 'q' to quit"
 		read -p "What program do you want to use? " programType
@@ -105,9 +102,9 @@ while [ "$exitcode" != "q" ]
 		#Function that sets and prints current paths for option selected
 		current_paths () {
 			cd $cpath
-			echo -e "\n############################################################\nCurrent Path: " $PWD 
+			echo -e "\n_____________________________________________________________\nCurrent Path: " $PWD 
 			echo -e "Upload Path: " $ppath
-			echo -e "\n\nCurrent Files:\n\n" "$(ls *) \n############################################################\n"
+			echo -e "\n\nCurrent Files:\n\n" "$(ls *) \n_____________________________________________________________\n"
 		}
 
 		

@@ -2,70 +2,55 @@
 
 # Choosing disk that has the most free space and uploading to it
 
-# This below has made the push to grab a df from server and then convert that result
-#   into a string variable
+mp1name=$(cut -c 10-25 <<<"$disk1")
+mp1=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp1name")
+mp1free=$(cut -c 29-33 <<<"$mp1")
 
-mp1free=" "
-mp2free=" "
-mp3free=" "
-mp4free=" "
-mp5free=" "
-mp1name=" "
-mp2name=" "
-mp3name=" "
-mp4name=" "
-mp5name=" "
+mp2name=$(cut -c 10-25 <<<"$disk2")
+mp2=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp2name")
+mp2free=$(cut -c 29-33 <<<"$mp2")
 
-mp1name=$(echo ${27})
-# The awk is being used to get ride of the Gi after the number so it can be used as an int
-mp1free=$(echo ${22} | awk '{ print substr( $0, 1, length($0)-2 ) }') 
-#echo $mp1free $mp1name
+mp3name=$(cut -c 10-25 <<<"$disk3")
+mp3=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp3name")
+mp3free=$(cut -c 29-33 <<<"$mp3")
 
-mp2name=$(echo ${18})
-mp2free=$(echo ${13} | awk '{ print substr( $0, 1, length($0)-2 ) }')
-#echo $mp2free $mp2name
+mp4name=$(cut -c 10-25 <<<"$disk4")
+mp4=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp4name")
+mp4free=$(cut -c 29-33 <<<"$mp4")
 
-mp3name=$(echo ${9})
-mp3free=$(echo ${4} | awk '{ print substr( $0, 1, length($0)-2 ) }')
-#echo $mp3free $mp3name
-
-mp4name=$(echo ${45})
-mp4free=$(echo ${40} | awk '{ print substr( $0, 1, length($0)-2 ) }')
-#echo $mp4free $mp4name
-
-mp5name=$(echo ${36})
-mp5free=$(echo ${31} | awk '{ print substr( $0, 1, length($0)-2 ) }')
-#echo $mp5free $mp5name
+mp5name=$(cut -c 10-25 <<<"$disk5")
+mp5=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp5name")
+mp5free=$(cut -c 29-33 <<<"$mp5")
 
 
 if (($mp1free >= $mp2free)) && (($mp1free >= $mp3free)) && (($mp1free >= $mp4free)) && (($mp1free >= $mp5free)) ; then
     #echo -e "\n"$mp1free
     #echo -e "\nI choose "$mp1name
     ppath="${disk1}"
-    echo "I choose ${mp1free}"
+    #echo "I choose ${mp1name}"
 elif (($mp2free >= $mp1free)) && (($mp2free >= $mp3free)) && (($mp2free >= $mp4free)) && (($mp2free >= $mp5free)) ; then
     #echo -e "\n"$mp2free
     #echo -e "\nI choose "$mp2name
     ppath="${disk2}"
-    echo "I choose ${mp2free}"
+    #echo "I choose ${mp2fname}"
 elif (($mp3free >= $mp1free)) && (($mp3free >= $mp2free)) && (($mp3free >= $mp4free)) && (($mp3free >= $mp5free)) ; then
     #echo -e "\n"$mp3free
     #echo -e "\nI choose "$mp3name
     ppath="${disk3}"
-    echo "I choose ${mp3free}"
+    #echo "I choose ${mp3name}"
 elif (($mp4free >= $mp1free)) && (($mp4free >= $mp2free)) && (($mp4free >= $mp3free)) && (($mp4free >= $mp5free)) ; then
     #echo -e "\n"$mp3free
-    echo -e "\nI choose "$mp4name
+    #echo -e "\nI choose "$mp4name
     ppath="${disk4}"
-    echo "${ppath} Is this"
-    echo "${disk4} is disk4"
-    echo "I choose ${mp4free}"
+    #echo "${ppath} Is this"
+    #echo "${disk4} is disk4"
+    #echo "I choose ${mp4name}"
 elif (($mp5free >= $mp1free)) && (($mp5free >= $mp2free)) && (($mp5free >= $mp3free)) && (($mp5free >= $mp4free)) ; then
     #echo -e "\n"$mp3free
-    echo -e "\nI choose "$mp5name
+    # echo -e "\nI choose "$mp5name
     ppath="${disk5}"
-    echo "${ppath} Is this"
-    echo "${disk5} is disk5"
-    echo "I choose ${mp5free}"
+    # echo "${ppath} Is this"
+    # echo "${disk5} is disk5"
+    #echo "I choose ${mp5name}"
 fi
 
