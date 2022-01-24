@@ -1,5 +1,5 @@
 #!/bin/bash
-path=/Volumes/MacPlexExternal3/PlexMedia/Season\ 19/
+path=/Volumes/MacPlexExternal5/PlexMedia/Death\ Note/
 cd "$path"
 echo $path
 
