@@ -12,7 +12,7 @@ paths:
   uploaduser: grantduvall
   cpath: /Users/$USER/Movies/Plex/
   # Change disk paths to where your Volumes are located
-  disk1: /Volumes/MacPlexExternal1/PlexMedia
+  disk1: /Volumes/WDGOLD/PlexMedia
   disk2: /Volumes/MacPlexExternal2/PlexMedia
   disk3: /Volumes/MacPlexExternal3/PlexMedia
   # Additional disks can be added 
