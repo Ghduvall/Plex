@@ -6,9 +6,9 @@
 paths:
   exitcode: z
   ipaddress: 192.168.1.192
-  logpath: /Volumes/MacPlexExternal1/PlexMedia/logs
+  logpath: /Volumes/WDGOLD/PlexMedia/logs
   # This grep is used for displaying df -lh of all volumes
-  grepsearchpattern: MacPlex
+  grepsearchpattern: WD
   uploaduser: grantduvall
   cpath: /Users/$USER/Movies/Plex/
   # Change disk paths to where your Volumes are located

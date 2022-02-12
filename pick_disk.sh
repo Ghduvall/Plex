@@ -22,6 +22,7 @@ mp5name=$(cut -c 10-25 <<<"$disk5")
 mp5=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp5name")
 mp5free=$(cut -c 29-33 <<<"$mp5")
 
+ppath="${disk1}"
 
 if (($mp1free >= $mp2free)) && (($mp1free >= $mp3free)) && (($mp1free >= $mp4free)) && (($mp1free >= $mp5free)) ; then
     #echo -e "\n"$mp1free
