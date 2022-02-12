@@ -2,7 +2,7 @@
 
 # Choosing disk that has the most free space and uploading to it
 
-mp1name=$(cut -c 10-25 <<<"$disk1")
+mp1name=$("$disk1")
 mp1=$(ssh "$uploaduser"@"$ipaddress" "df -lh | grep $mp1name")
 mp1free=$(cut -c 29-33 <<<"$mp1")
 
