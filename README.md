@@ -11,7 +11,8 @@
 
     eval $(parse_yaml YOURPATHTOCONFIG "config_")
     
-    
-    
 ### config
     Add this file to ~/.ssh/ to not have scp client pipe discconect break issues.
+    
+### rmuploaded.sh
+    add this file to your crontab -e schedule to remove uploaded files normally  
