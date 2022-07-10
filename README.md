@@ -10,3 +10,8 @@
  ### up_script.sh
 
     eval $(parse_yaml YOURPATHTOCONFIG "config_")
+    
+    
+    
+### config
+    Add this file to ~/.ssh/ to not have scp client pipe discconect break issues.
